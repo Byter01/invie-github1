@@ -7,9 +7,9 @@
 	<link rel="stylesheet" href="css/invie.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body>
-	<section id="portada" class="portada background"><!-- portada -->
-		<header id="header" class="header contenedor"><!--header-->
+<body class="precios">
+	<header id="header" class="header background"><!--header-->
+		<div class="contenedor">
 			<figure class="logo"><!--logo-->
 			<img src="img/invie.png" width="186" height="60" alt="logotipo">
 			</figure>
@@ -20,54 +20,61 @@
 					<a href="index.html">home</a>
 					</li>
 					<li>
-					<a href="#guitarras">guitarras</a>
+					<a href="index.html#guitarras">guitarras</a>
 					</li>
 					<li>
 					<a href="precios.html">precios</a>
 					</li>
 				</ul>
 			</nav>
-		</header>
+		</div>
+	</header>
+	<section class="tabla">
 		<div class="contenedor">
-			<h1 class="titulo">Guitarras <span>invie</span>sibles</h1><!--titulo-->
-			<h3 class="title-a">se la estrella de rock que siempre quisiste ser</h3><!--resumen-->
-			<a class="button" href="#guitarras">conoce mas</a>
+			<table>
+				<thead>
+					<tr>
+						<th>modelo</th>
+						<th>precio</th>
+						<th>descripcion</th>
+						<th>modelo</th>
+						<th>precio</th>
+						<th>descripcion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Invie classic</td>
+						<td>$10.000</td>
+						<td>una guitarra para ti</td>
+						<td>Invie classic</td>
+						<td>$10.000</td>
+						<td>una guitarra para ti</td>
+					</tr>
+					<tr>
+						<td>Invie classic</td>
+						<td>$10.000</td>
+						<td>una guitarra para ti</td>
+						<td>Invie classic</td>
+						<td>$10.000</td>
+						<td>una guitarra para ti</td>
+					</tr>
+					<tr>
+						<td>Invie classic</td>
+						<td>$10.000</td>
+						<td>una guitarra para ti</td>
+						<td>Invie classic</td>
+						<td>$10.000</td>
+						<td>una guitarra para ti</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-	</section>
-	<section id="guitarras" class="guitarras contenedor"><!--guitarras-->
-		<h2>nuestras guitarras</h2><!--titulo-->
-		<div class="video-demo">
-			<div class="video-contenedor">
-				<iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-		<article class="guitarra"><!--guitarra1-->
-			<img data-src="img/invie-acustica.png" alt="guitarra1" width="350" class="right">
-			<div class="contenedor-guitarra-a">
-				<h3 class="title-b">invie acustica</h3>
-				<ol>
-					<li>estilo vintage</li>
-					<li>madera fender</li>
-					<li>incluye estuche inviesible de aluminio</li>
-				</ol>
-			</div>
-		</article>
-		<article class="guitarra b"><!--guitarra2-->
-			<img data-src="img/invie-classic.png" alt="guitarra2" width="400" class="left">
-			<div class="contenedor-guitarra-b">
-				<h3 class="title-b">invie Classic</h3>
-				<ol>
-					<li>estilo vintage</li>
-					<li>liviana</li>
-					<li>incluye estuche inviesible de cuero</li>
-				</ol>
-			</div>
-		</article>
 	</section>
 	<footer class="footer">
 	<div class="contenedor">		
 		<div class="contacto">
-			<img data-src="img/invie-white.png" alt="logo blanco">
+			<img src="img/invie-white.png" alt="logo blanco">
 			<a href="tel:+02122808392"><strong>telefono</strong><span>09 00 17288 88</span></a>
 			<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>Contacto</span></a>
 		</div>
@@ -109,7 +116,6 @@
 	</div>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 	<script>
 	//con window.matchMedia('(max-width:800px)') hacemos un mediaquierie en js
 		var consulta = window.matchMedia('(max-width: 500px)');
@@ -137,30 +143,11 @@
 				burguerButton.classList.toggle('icon-close')
 			};
 
-			function showMenu(){
-
-				menu.classList.add('show');
-
-			};
-
-			function hideMenu(){
-
-				menu.classList.remove('show');
-
-			};
-
 	mediaQuery();
 
 	var blazy = new Blazy({
 		selector: 'img'
 	});
-
-	//gestos touch con hammer.js
-	var body = document.body;
-
-	var hammertime = new Hammer(body);
-	hammertime.on('swipeleft', hideMenu);
-	hammertime.on('swiperight', showMenu);
 	</script>
 </body>
 </html>
